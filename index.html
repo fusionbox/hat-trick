@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Fusionbox Hat-trick</title>
+    <script src="/lib/jquery.js"></script>
+    <script src="/lib/underscore.js"></script>
+    <script src="/lib/backbone.js"></script>
+    <script src="/lib/backbone.localStorage.js"></script>
+    <script src="/hat-trick.js"></script>
+    <style>
+      .feature {
+        width: 200px;
+        float: right;
+      }
+
+      .feature.dazzle {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Hat-trick picks stuff out of a hat</h1>
+    </header>
+
+    <section id="hat">
+      <div class="feature"></div>
+
+      <ul class="people">
+      </ul>
+
+      <form>
+        <label>Name: <input type="text" name="name"></label>
+        <input type="submit">
+      </form>
+
+      <button class="pick" type="button">Pick</button>
+
+    </section>
+
+    <script>
+      window.hat_view = new HatTrick.HatView();
+    </script>
+  </body>
+</html>
