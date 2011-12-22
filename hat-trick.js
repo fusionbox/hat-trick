@@ -123,8 +123,11 @@
       event.preventDefault();
       
       var form = event.target
-        , person = this.hat.create({name: form.name.value})
+        , name = form.name.value
         ;
+
+      if ( name )
+        this.hat.create({name: name});
 
       form.name.value = '';
     }
