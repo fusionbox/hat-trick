@@ -13,11 +13,7 @@
   , localStorage: new Store('Hat')
 
   , pickAndRemoveOne: function() {
-      // TODO: Add some random juice.
-      var length = this.length
-        , randIndex = Math.floor(Math.random() * length)
-        , model = this.models[randIndex]
-        ;
+      var model = random.choice(this.models);
       
       model.destroy();
       return model;
