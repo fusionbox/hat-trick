@@ -6,15 +6,40 @@
     <script src="lib/underscore.js"></script>
     <script src="lib/backbone.js"></script>
     <script src="lib/backbone.localStorage.js"></script>
+    <script src="lib/crypto-sha256.js"></script>
+    <script src="random.js"></script>
     <script src="hat-trick.js"></script>
     <style>
       .feature {
         width: 200px;
         float: right;
+        margin-right: 100px;
+        text-align: center;
       }
 
       .feature.dazzle {
         background-color: yellow;
+        -webkit-animation-duration: 3s;
+        -webkit-animation-name: spin;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-transform-origin: center center;
+      }
+
+      @-webkit-keyframes spin {
+        0% {
+          -webkit-transform: rotate(0deg);
+          font-size: 100%;
+        }
+        33% {
+          font-size: 150%;
+        }
+        66% {
+          font-size: 80%;
+        }
+        100% {
+          font-size: 100%;
+          -webkit-transform: rotate(360deg);
+        }
       }
     </style>
   </head>
